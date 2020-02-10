@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="zoomer.css" media="screen" />
+<meta http-equiv="Content-Language" content="fr" />
+<title>Zoomer for jQuery</title>
+<!--[if IE 6]>
+	<style type="text/css" media="screen">
+	ul.thumb li img.hover {
+	margin-top:15px;
+	background:url(thumb_bg.gif) no-repeat center center;
+	border: none;
+}
+ul.thumb li .title{color:#fff;width:185px;height:50px;margin:0;font-weight:900;background:url(title.gif) no-repeat center center;padding:17px 0 0 0;text-align:center;}
+	</style>
+<![endif]-->
+<style type="text/css">
+body {
+	font: Arial, Helvetica, sans-serif normal 10px;
+	margin: 0; padding: 0;
+}
+* {margin: 0; padding: 0;}
+#page{
+		margin:0 auto;
+		position:relative;
+		width:735px;
+		height:430px;
+		font-family:verdana;
+		font-size:12px;
+	}
+	#content{
+		width:100%;
+	}
+pre{
+	border:3px solid #ccc;
+	padding:5px;
+	font-size:12px;
+	font-family:arial;
+	}
+	.bold{font-weight:bold;}
+	.blue{color:blue;}
+	.red{color:red;}
+#footer{
+	margin-top:5px;
+	text-align:center;
+	width:100%;
+	height:auto;
+	padding:5px;
+	background-color:#ccc;
+	}
+ #logo,#foot { margin-left: 10px; }
+</style> 
+<script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="zoomer.js"></script> 
+</head>
+
+<body>
+	<div id="page" align="center" >
+		<div id="content" align="center">
+		  <ul class="thumb">
+			<li><a href="#"><img src="robots.jpg" alt="Robots like cameras" title="Hi!大家好，
+            我是网页设计小组的何依同学，
+            很高兴见到大家!
+            我这个人没有什么别的特点就是一个字：帅！" /></a></li>
+				<li><a href="#"><img src="monster.jpg" alt="Monsters!" /></a></li>
+				<li><a href="#"><img src="santa.jpg" alt="Santa down under" /></a></li>
+				<li><a href="#"><img src="thumb6.jpg" alt="Sponguebob!" /></a></li>
+				<li><a href="#"><img src="thumb7.jpg" alt="Star Wars" /></a></li>
+				<li><a href="#"><img src="hulk.jpg" alt="Hulk Smash!" /></a></li>
+				<li><a href="#"><img src="dino.png" alt="Dinosaur time" /></a></li>
+				<li><a href="#"><img src="orange.jpg" alt="Orange car" /></a></li>
+			</ul>
+		</div>
+<script type="text/javascript">
+$(document).ready(function(){
+ 	$('ul.thumb li').Zoomer({speedView:200,speedRemove:400,altAnim:true,speedTitle:400,debug:false});
+});
+</script>
+</div>
+</body>
+</html>

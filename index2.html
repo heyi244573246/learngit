@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>jquery.orbit插件实现简洁方便的幻灯片演示效果</title>
+<link rel="stylesheet" href="css/orbit.css">
+</head>
+<body>
+
+<!-- 代码begin -->
+<div style="width: 700px; height: 382px; margin: 0 auto;">
+	<div id="featured">
+		<a class="orbit-item" href="" data-caption="#htmlCaption1"><img src="images/img1.jpg" alt="img1"></a>
+		<a class="orbit-item" href="" data-caption="#htmlCaption2"><img src="images/img2.jpg" alt="img1"></a>
+		<a class="orbit-item" href="" data-caption="#htmlCaption3"><img src="images/img3.jpg" alt="img1"></a>
+		<a class="orbit-item" href="" data-caption="#htmlCaption4"><img src="images/img4.jpg" alt="img1"></a>
+	</div>
+	<span class="orbit-caption" id="htmlCaption1">网络协会网页设计比赛正式开始</span>
+	<span class="orbit-caption" id="htmlCaption2">网络实验室招新 正在进行中</span>
+	<span class="orbit-caption" id="htmlCaption3">李、宋、高、何等荣获2014年省大学生技术展示比赛金奖</span>
+	<span class="orbit-caption" id="htmlCaption4">指导老师曾小荟老师对创作团队进行指导</span>
+</div>
+<!-- 代码end -->
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.orbit.min.js"></script>
+<script>
+$(window).load(function() {
+	$('#featured').orbit({
+		bullets : true,
+		startClockOnMouseOut : true,
+		captionAnimation : 'slideOpen'
+	});
+});
+</script>
+</body>
+</html>
